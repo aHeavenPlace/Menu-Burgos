@@ -197,6 +197,38 @@ img {
     box-shadow: 1px 1px 0 var(--ambar)
 }
 
+.order-link {
+    color: var(--rojo);
+    white-space: nowrap;
+    transition: color .2s, text-shadow .2s
+}
+
+.order-link:hover {
+    color: var(--ambar);
+    text-shadow: 0 0 10px rgba(252, 191, 73, .45)
+}
+
+.map-frame {
+    min-height: 320px;
+    border: 2px solid var(--linea);
+    box-shadow: 8px 8px 0 var(--rojo-deep);
+    overflow: hidden;
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+    border: 0
+}
+
+@media(max-width:640px) {
+    .map-frame,
+    .map-frame iframe {
+        min-height: 280px
+    }
+}
+
 @media(max-width:640px) {
     .sticker {
         box-shadow: 3px 3px 0 var(--ambar);

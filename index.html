@@ -131,6 +131,21 @@
         </div>
     </section>
 
+    <!-- CONTACTO Y UBICACION -->
+    <section id="contacto" class="relative py-16 sm:py-20 md:py-28 px-4 sm:px-5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div data-reveal>
+                <span class="chip">PEDIDOS Y UBICACION</span>
+                <h2 class="disp text-4xl sm:text-5xl md:text-7xl mt-3 sm:mt-4 leading-[.9]" style="color:var(--crema)">HABLEMOS<br><span class="neon">POR WHATSAPP</span></h2>
+                <p class="mt-4 sm:mt-6 leading-relaxed text-sm sm:text-base" style="color:var(--crema-dim)">Escríbenos para realizar tu pedido o visítanos en Burgos Gastro House.</p>
+                <a class="sticker whatsapp-link disp text-base sm:text-lg px-5 sm:px-7 py-3 mt-6 tracking-widest" href="https://wa.me/573023722712?text=Hola%2C%20buenas%20noches." target="_blank" rel="noopener noreferrer">WHATSAPP →</a>
+            </div>
+            <div class="map-frame" data-reveal>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.063267438946!2d-73.17101970321045!3d7.060926500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f28d99586fd%3A0x259562e5d98878db!2sBurgos%20Gastro%20House!5e1!3m2!1sen!2sco!4v1787935954838!5m2!1sen!2sco" title="Ubicación de Burgos Gastro House en Google Maps" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- LA CASA -->
     <section id="casa" class="relative py-16 sm:py-20 md:py-28 px-4 sm:px-5"
         style="background:linear-gradient(180deg,var(--negro),var(--negro2),var(--negro))">
@@ -174,7 +189,6 @@
                 class="disp text-xl sm:text-2xl" style="color:var(--rojo)">B</span></div>
         <div class="disp text-2xl sm:text-3xl" style="color:var(--crema)">BURGOS <span style="color:var(--crema-fade)">· GASTRO
                 HOUSE</span></div>
-        <div class="hand text-xl sm:text-2xl mt-1" style="color:var(--ambar)">by Badgar</div>
         <p class="text-[10px] sm:text-xs mt-4 sm:mt-5 tracking-widest" style="color:var(--crema-fade)">© 2026 BURGOS GASTRO HOUSE · HECHO AL
             CARBÓN EN GIRÓN, SANTANDER</p>
     </footer>
@@ -606,6 +620,9 @@
         /* ---------- RENDER ---------- */
         const panelEl = document.getElementById("panel");
         let current = "burgers";
+        const WHATSAPP_NUMBER = "573023722712";
+        const whatsappOrderUrl = (name) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Buenas noches, me gustaria hacer este pedido ${name}.`)}`;
+        const whatsappOrderLink = (name) => `<a class="order-link disp text-sm tracking-widest" href="${whatsappOrderUrl(name)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">PEDIR →</a>`;
 
         function rowHTML(it) {
     const i = idxOf(it); 
@@ -620,6 +637,7 @@
     </div>
     <span class="dots"></span>
     <span class="pr">${it.price}</span>
+        ${whatsappOrderLink(it.name)}
   </div>`;
 }
 
@@ -635,7 +653,7 @@
       <p class="text-[13px] mt-2 leading-snug" style="color:var(--crema-fade)">${it.desc}</p>
       <div class="flex items-center justify-between mt-4">
         <span class="disp text-2xl" style="color:var(--ambar)">${it.price}</span>
-        <span class="disp text-sm tracking-widest" style="color:var(--rojo)">PEDIR →</span>
+                ${whatsappOrderLink(it.name)}
       </div>
     </div>
   </div>`;
@@ -710,6 +728,7 @@ function beverageItemHTML(it) {
             <div class="beverage-price">
                 ${it.price}
             </div>
+            ${whatsappOrderLink(it.name)}
 
         </div>
 
