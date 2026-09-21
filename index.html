@@ -43,6 +43,7 @@
             </a>
             <nav class="hidden md:flex items-center gap-7 disp text-lg tracking-wide">
                 <a href="#carta" class="navlink" data-sec="carta">MENU</a>
+                <a href="#contacto" class="navlink" data-sec="contacto">UBICACIÓN</a>
                 <a href="#casa" class="navlink" data-sec="casa">LA CASA</a>
             </nav>
             <div class="flex items-center gap-2">
@@ -58,6 +59,7 @@
         <button id="mnavClose" aria-label="Cerrar" class="absolute top-5 right-5 disp text-4xl"
             style="color:var(--rojo)">✕</button>
         <a href="#carta" class="nav-m disp text-4xl" style="color:var(--crema)">LA CARTA</a>
+        <a href="#contacto" class="nav-m disp text-4xl" style="color:var(--crema)">UBICACIÓN</a>
         <a href="#casa" class="nav-m disp text-4xl" style="color:var(--crema)">LA CASA</a>
     </div>
 
@@ -96,6 +98,7 @@
 
             <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-9" data-reveal>
                 <a href="#carta" class="sticker disp text-sm sm:text-lg px-5 sm:px-7 py-2 sm:py-3 tracking-widest">VER LA CARTA</a>
+                <a href="https://wa.me/573023722712?text=Hola%2C%20buenas%20noches." class="ghost disp text-sm sm:text-lg px-5 sm:px-7 py-2 sm:py-3 tracking-widest" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
             </div>
         </div>
 
@@ -232,7 +235,7 @@
                 photo: [
                     reg({ n: "01", name: "PICADA AL ESTILO BURGOS (PARA DOS)", price: "$58.900", tag: "RECOMENDADO", img: "img/LaBisteca/picada.avif", desc: "200gr de carne de res ahumada al carbón, 200gr de filete de pechuga ahumada al carbón, chorizo de ternera, cascos de papa rustica, yuca frita, arepa amarilla, y ensalada de la casa." }),
                     reg({ n: "02", name: "ENTRECOT (CHATAS)", price: "$39.9000", img: "img/LaBisteca/Entrecot.jpeg", desc: "Corte francés ubicado en el costillar de la res (350 gr) a la parrilla, acompañado de cascos de papas criollas y ensalada de la casa.", extra: "<strong>Elige tu termino</strong><br>Tres Cuartos<br>Termino Medio<br>Bien Asado" }),
-                    reg({ n: "03", name: "LOMO FINO EN SALSA DE CHAMPIÑONES", price: "$39.900", img: IMG.b3, desc: "250gr de lomo fino en salsa de champiñones al vino, acompañado de ensalada de la casa y papa en casco" }),
+                    reg({ n: "03", name: "LOMO FINO EN SALSA DE CHAMPIÑONES", img:"img/LaBisteca/LomoFino.avif", price: "$39.900", desc: "250gr de lomo fino en salsa de champiñones al vino, acompañado de ensalada de la casa y papa en casco" }),
                     reg({ n: "04", name: "COSTILLAS BBQ", price: "39.900", img: "img/LaBisteca/Costillas.jpeg", desc: "400gr de costillas de cerdo ahumadas, reducidas en BBQ de cerveza negra y chipotle, acompañadas de cascos de papa rustica y ensalada de la casa." }),
                     reg({ n: "05", name: "COMBINADO BURGOS", price: "$37.900", img: "img/LaBisteca/Combinado.jpeg", desc: "130gr de chataas, 120gr filete de pechuga, 2 chorizo de cerdo, acompañado cascos de papa rustica y ensalada de la casa.<br>(Combínalo a tu gusto).", }),
                     reg({ n: "06", name: "SUPREMA NAPOLITANA", price: "$36.000", img: "img/LaBisteca/Suprema.JPG", desc: "300gr de suprema de pollo con salsa napolitana y queso gouda, acompañado de ensalada de la casa y papa en casco" }),
@@ -253,7 +256,7 @@
                     reg({ n: "05", name: "PAMPA BURGER", price: "$25.900", img: "img/hamburguesas/Pampa.jpg", desc: "Pan brioche, carne al carbón, chorizo a la parrilla, queso cheddar, champiñones salteados al orégano, tomate fresco y lechuga romana.", extra: "<strong>Doble carne</strong><br>$34.400" }),
                     reg({ n: "06", name: "ONION & BACON", price: "$25.500", img: "img/hamburguesas/Onion.jpeg", desc: "Pan brioche, carne al carbón,2 tocineta ahumada, mezcla de quesos, aros de cebolla apanados, BBQ de cerveza negra y chipotle, lechuga romana y tomate fresco.", extra: "<strong>Doble carne</strong><br>$34.000" }),
                     reg({ n: "07", name: "SANTERA BURGOS", price: "$24.900", img: "img/hamburguesas/Santera.jpeg", desc: "Pan brioche, carne al carbón, mermelada de chorizo en reducción de panela, queso campesino, cebolla fresca, tomate fresco y lechuga romana.", extra: "<strong>Doble carne</strong><br>$33.400" }),
-                    reg({ n: "08", name: "CLASSIC BURGOS", price: "$21.900", desc: "Pan brioche, carne al carbón, tocineta ahumada, mezcla de quesos, tomate, lechuga romana y opción a elegir: pepinillo agridulces, cebolla fresca, cebolla confitada o jalapeños.<br><br><strong>Elige tu opción</strong><br>Cebolla Confitada<br>Cebolla fresca<br>Pepinillos agridulces<br>Jalapeños<br>Ninguna", extra: "<strong>Doble carne</strong><br>$30.400" })
+                    reg({ n: "08", name: "CLASSIC BURGOS", price: "$21.900", img: "img/hamburguesas/Clasic.avif", desc: "Pan brioche, carne al carbón, tocineta ahumada, mezcla de quesos, tomate, lechuga romana y opción a elegir: pepinillo agridulces, cebolla fresca, cebolla confitada o jalapeños.<br><br><strong>Elige tu opción</strong><br>Cebolla Confitada<br>Cebolla fresca<br>Pepinillos agridulces<br>Jalapeños<br>Ninguna", extra: "<strong>Doble carne</strong><br>$30.400" })
 
                 ]
             },
@@ -292,9 +295,9 @@
                 label: "PAPAS BURGOS HOUSE",
                 type: "cards",
                 photo: [
-                    reg({ n: "01", name: "BURGOS FRIES", price: "$30.000", tag: "RECOMENDADO", img: "img/papas/BurgosFries.jpeg", desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
-                    reg({ n: "02", name: "BURGOS FRIES (PARA DOS)", price: "$39.000", img: "img/papas/BurgosFries.jpeg", desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
-                    reg({ n: "03", name: "CHICKEN FRIES", price: "$25.500", img: "", desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "01", name: "BURGOS FRIES", price: "$30.000", tag: "RECOMENDADO", img: "img/Papas/Burgos_Fries.jpeg", desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "02", name: "BURGOS FRIES (PARA DOS)", price: "$39.000", img: "img/Papas/Burgos_Fries.jpeg", desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "03", name: "CHICKEN FRIES", price: "$25.500", img: "img/Papas/Chicken_fries.jpeg", desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
                     reg({ n: "03", name: "SALCHI CHORI FRIES", price: "$22.000", img: "", desc: "300gr de papa rústica, salchicha tipo americana y chorizo de ternera, salsa de queso cheddar, salsa de la casa y queso campesino.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" })
 
                 ]
@@ -316,11 +319,11 @@
                 label: "COCTELES",
                 type: "cards",
                 photo: [
-                    reg({ n: "01", name: "TIKI BURGOS", price: "$21.000", img: "", desc: "Whiskey, triple sec, ron, miel de agave, lulo, jugo de naranja, piña y zumo de limón." }),
+                    reg({ n: "01", name: "TIKI BURGOS", price: "$21.000", img: "img/Cocteles/Tiki.avif", desc: "Whiskey, triple sec, ron, miel de agave, lulo, jugo de naranja, piña y zumo de limón." }),
                     reg({ n: "02", name: "PIÑA COLADA", price: "$21.000", img: "img/Cocteles/colada.JPG", desc: "Ron, piña y crema de coco." }),
-                    reg({ n: "03", name: "TINTO DE VERANO", price: "$19.000", img: "", desc: "Vino tinto cabernet sauvignon, soda bretaña y limón." }),
-                    reg({ n: "04", name: "TOMMY’S MARGARITA", price: "$19.000", img: "", desc: "Tequila, jugo de naranja, zumo de limón, miel de agave y tajín." }),
-                    reg({ n: "05", name: "MOJITO TENTATION", price: "$19.000", img: "", desc: "Ron, soda bretaña, zumo de limón, hierbabuena y almíbar." }),
+                    reg({ n: "03", name: "TINTO DE VERANO", price: "$19.000", img: "img/Cocteles/Tinto.avif", desc: "Vino tinto cabernet sauvignon, soda bretaña y limón." }),
+                    reg({ n: "04", name: "TOMMY’S MARGARITA", price: "$19.000", img: "img/Cocteles/Margarita.avif", desc: "Tequila, jugo de naranja, zumo de limón, miel de agave y tajín." }),
+                    reg({ n: "05", name: "MOJITO TENTATION", price: "$19.000", img: "img/Cocteles/Mojito.avif", desc: "Ron, soda bretaña, zumo de limón, hierbabuena y almíbar." }),
                     reg({ n: "06", name: "PINK DAIQUIRI", price: "$18.000", img: "img/Cocteles/pink.JPG", desc: "Ron, fresa, azúcar, limón" }),
                     reg({ n: "07", name: "PALOMA FRESH", price: "$18.000", img: "img/Cocteles/paloma2.png", desc: "Tequila, jugo de toronja, sumo de limón, Tajín" })
 
@@ -631,7 +634,7 @@
             return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
         };
 
-        const whatsappOrderLink = (name) => `<button type="button" class="order-link disp text-sm tracking-widest" onclick="event.stopPropagation(); openOrderFlow('${name.replace(/'/g, "\\'")}')">PEDIR →</button>`;
+        const whatsappOrderLink = (name) => `<button type="button" class="order-link disp text-sm tracking-widest" onclick="event.stopPropagation(); openOrderFlow('${name.replace(/'/g, "\\'")}')">PEDIR POR WHATSAPP</button>`;
 
         function rowHTML(it) {
     const i = idxOf(it); 
@@ -646,7 +649,10 @@
     </div>
     <span class="dots"></span>
     <span class="pr">${it.price}</span>
-        ${whatsappOrderLink(it.name)}
+    <div class="row-actions">
+      <button type="button" class="details-link" onclick="event.stopPropagation(); abrirModal(${i})">VER DETALLE</button>
+      ${whatsappOrderLink(it.name)}
+    </div>
   </div>`;
 }
 
@@ -660,9 +666,12 @@
     <div class="p-5">
       <h3 class="disp text-3xl leading-none" style="color:var(--crema)">${it.name}</h3>
       <p class="text-[13px] mt-2 leading-snug" style="color:var(--crema-fade)">${it.desc}</p>
-      <div class="flex items-center justify-between mt-4">
+      <div class="card-actions mt-4">
         <span class="disp text-2xl" style="color:var(--ambar)">${it.price}</span>
-                ${whatsappOrderLink(it.name)}
+        <div class="card-actions-right">
+          <button type="button" class="details-link" onclick="event.stopPropagation(); abrirModal(${i})">VER DETALLE</button>
+          ${whatsappOrderLink(it.name)}
+        </div>
       </div>
     </div>
   </div>`;
@@ -744,18 +753,6 @@ function beverageItemHTML(it) {
     </div>`;
 }
 
-        function featureHTML(it) {
-            const i = idxOf(it); return `<div class="frame aspect-square cursor-pointer floaty" data-anim onclick="abrirModal(${i})">
-    <img src="${it.img}" alt="${it.name}" loading="lazy">
-    <div class="absolute -bottom-4 left-3 right-3 px-4 py-3 border-2" style="background:var(--negro);border-color:var(--rojo)">
-      <div class="flex items-center justify-between gap-3">
-        <span class="disp text-lg md:text-xl leading-none" style="color:var(--crema)">${it.name}</span>
-        <span class="disp text-lg md:text-xl whitespace-nowrap" style="color:var(--ambar)">${it.price}</span>
-      </div>
-    </div>
-  </div>`;
-        }
-
        function render(key) {
     const d = MENU[key]; let h = "";
 
@@ -791,30 +788,6 @@ function beverageItemHTML(it) {
 
             </div>`;
         }
-
-    } else if (d.type === "split") {
-
-        h += `<div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative pb-8">
-                ${featureHTML(d.feature)}
-            </div>
-
-            <div>
-                ${d.items.map(rowHTML).join("")}
-            </div>
-        </div>`;
-
-    } else if (d.type === "split-rev") {
-
-        h += `<div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                ${d.items.map(rowHTML).join("")}
-            </div>
-
-            <div class="order-1 md:order-2 relative pb-8">
-                ${featureHTML(d.feature)}
-            </div>
-        </div>`;
 
     } else if (d.type === "beverages") {
 
@@ -860,7 +833,10 @@ function beverageItemHTML(it) {
         function abrirModal(i) {
             const it = ALL[i]; if (!it) return;
             const img = it.img ? `<div class="aspect-square overflow-hidden"><img src="${it.img}" alt="${it.name}" class="w-full h-full object-cover" style="filter:saturate(1.1) contrast(1.05)"></div><div class="ticket"></div>` : "";
-            document.getElementById("modalBox").innerHTML = `
+            const modalBox = document.getElementById("modalBox");
+            const modal = document.getElementById("modal");
+            document.body.classList.add("modal-active");
+            modalBox.innerHTML = `
     <button class="x" onclick="cerrarModal()" aria-label="Cerrar">✕</button>
     ${img}
     <div class="p-7 text-center">
@@ -875,16 +851,21 @@ function beverageItemHTML(it) {
       <div class="disp text-4xl mt-5" style="color:var(--ambar)">${it.price}</div>
       ${it.extra ? `
 <div class="mt-5 pt-4 border-t" style="border-color:var(--linea)">
-    <div class="disp text-lg" style="color:var(--ambar)">
+    <div class="modal-extra-box">
         ${it.extra}
     </div>
 </div>
 ` : ""}
-      <button class="sticker disp text-lg px-8 py-3 mt-6 tracking-widest" onclick="openOrderFlow('${it.name.replace(/'/g, "\\'")}')">
-        PEDIR
-      </button>
+      <div class="mt-6 text-[10px] uppercase tracking-[.22em]" style="color:var(--crema-fade)">¿QUÉ DESEAS HACER?</div>
+      <div class="modal-actions mt-3">
+        <button class="sticker disp text-lg px-8 py-3 tracking-widest" onclick="openOrderFlow('${it.name.replace(/'/g, "\\'")}')">
+          AGREGAR AL PEDIDO
+        </button>
+      </div>
     </div>`;
-            document.getElementById("modal").classList.add("on");
+            modal.scrollTop = 0;
+            modalBox.scrollTop = 0;
+            modal.classList.add("on");
             document.body.style.overflow = "hidden";
         }
 
@@ -913,7 +894,6 @@ function beverageItemHTML(it) {
 
         function renderOrderModal() {
             const selectedItems = orderState.items;
-            const allItems = getAllMenuItemsForOrder();
             const availableByCategory = Object.keys(MENU).map((key) => {
                 const section = MENU[key];
                 const sectionItems = (() => {
@@ -960,15 +940,22 @@ function beverageItemHTML(it) {
                 `).join("")
                 : '<p class="text-sm" style="color:var(--crema-dim)">Aún no tienes productos en tu pedido.</p>';
 
-            document.getElementById("modalBox").innerHTML = `
+            const countText = selectedItems.length ? `${selectedItems.length} ${selectedItems.length === 1 ? 'producto' : 'productos'}` : 'pedido vacío';
+
+            const modalBox = document.getElementById("modalBox");
+            const modal = document.getElementById("modal");
+            document.body.classList.add("modal-active");
+            modalBox.innerHTML = `
                 <button class="x" onclick="cerrarModal()" aria-label="Cerrar">✕</button>
                 <div class="order-window p-5 md:p-6">
                     <div class="order-panel">
+                        <div class="order-summary-badge">${countText}</div>
                         <span class="tag inline-block mb-3" style="position:static">TU PEDIDO</span>
                         <h3 class="disp text-4xl md:text-5xl leading-none" style="color:var(--crema)">¿Qué más quieres?</h3>
+                        <div class="order-hint">Puedes agregar más elementos antes de enviar tu pedido.</div>
                         <div class="mt-4 space-y-3">${listHTML}</div>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                            <button type="button" class="ghost disp text-sm px-5 py-3 tracking-widest" onclick="continueCurrentOrder()">SEGUIR CON ESTE PEDIDO</button>
+                            <button type="button" class="ghost disp text-sm px-5 py-3 tracking-widest" onclick="continueCurrentOrder()">SEGUIR EXPLORANDO</button>
                             <button type="button" class="sticker disp text-sm px-5 py-3 tracking-widest" onclick="continueCurrentOrder(true)">CONFIRMAR POR WHATSAPP</button>
                         </div>
                     </div>
@@ -978,11 +965,14 @@ function beverageItemHTML(it) {
                     </div>
                 </div>
             `;
+            modal.scrollTop = 0;
+            modalBox.scrollTop = 0;
         }
 
         function openOrderFlow(name) {
             const cleanName = (name || '').trim();
             if (!cleanName) return;
+            document.body.classList.add("modal-active");
             orderState.items = [cleanName];
             renderOrderModal();
             document.getElementById("modal").classList.add("on");
@@ -1024,12 +1014,12 @@ function beverageItemHTML(it) {
             cerrarModal();
         }
 
-        function cerrarModal() { document.getElementById("modal").classList.remove("on"); document.body.style.overflow = ""; }
-        function agregar(n) { const b = event.target; b.textContent = "¡ANOTADO! ✓"; b.style.background = "var(--rojo-deep)"; setTimeout(() => cerrarModal(), 700); }
+        function cerrarModal() {
+            document.getElementById("modal").classList.remove("on");
+            document.body.classList.remove("modal-active");
+            document.body.style.overflow = "";
+        }
         document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarModal(); });
-
-        /* ---------- RESERVA ---------- */
-        function reservar(e) { e.preventDefault(); const b = e.target.querySelector("button"); const t = b.textContent; b.textContent = "¡MESA APARTADA! 🔥"; b.style.background = "var(--rojo-deep)"; setTimeout(() => { e.target.reset(); b.textContent = t; b.style.background = ""; }, 1800); }
 
         /* ---------- MOBILE NAV ---------- */
         const mnav = document.getElementById("mnav");
@@ -1050,7 +1040,7 @@ function beverageItemHTML(it) {
                 document.querySelectorAll(".navlink").forEach(l => l.classList.toggle("on", l.dataset.sec === id));
             }
         }), { rootMargin: "-45% 0px -50% 0px" });
-        ["carta", "casa", "mesa"].forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
+        ["carta", "contacto", "casa", "mesa"].forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
 
         /* ---------- INIT ---------- */
         buildTabs();
