@@ -200,12 +200,109 @@ img {
 .order-link {
     color: var(--rojo);
     white-space: nowrap;
-    transition: color .2s, text-shadow .2s
+    transition: color .2s, text-shadow .2s;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left
 }
 
 .order-link:hover {
     color: var(--ambar);
     text-shadow: 0 0 10px rgba(252, 191, 73, .45)
+}
+
+.order-window {
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+    gap: 20px;
+    width: min(920px, 92vw);
+    min-height: 420px;
+    align-items: start
+}
+
+.order-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--linea);
+    padding: 18px;
+    min-height: 100%
+}
+
+.order-catalog {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--linea);
+    padding: 18px;
+    min-height: 100%
+}
+
+.order-catalog-scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+    display: grid;
+    gap: 12px
+}
+
+.order-category-block {
+    border: 1px solid var(--linea);
+    background: rgba(255, 255, 255, 0.01);
+    padding: 10px
+}
+
+.order-category-title {
+    color: var(--rojo);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: .08em;
+    font-size: 1.1rem;
+    margin-bottom: 8px
+}
+
+.order-category-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.order-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--linea);
+    background: rgba(255, 255, 255, 0.02)
+}
+
+.order-item-row span {
+    color: var(--crema);
+    font-weight: 600
+}
+
+.mini-remove,
+.mini-add {
+    border: 1px solid var(--linea);
+    background: var(--negro2);
+    color: var(--crema);
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: .2s ease
+}
+
+.mini-remove:hover,
+.mini-add:hover {
+    border-color: var(--rojo);
+    color: var(--ambar)
+}
+
+@media(max-width:768px) {
+    .order-window {
+        grid-template-columns: 1fr;
+        min-height: 0
+    }
+
+    .order-catalog-scroll {
+        max-height: 42vh
+    }
 }
 
 .map-frame {
