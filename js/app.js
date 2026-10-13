@@ -20,9 +20,9 @@
   };
 
   const IMG = {
-    entrada1: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1c81b404f-6a3e-4ad1-b8a7-6e0de40d9e1c.png",
-    entrada2: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/175a6405d-f6b4-451a-93ef-a5e5c6542e01.png",
-    entrada3: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/14b449831-25aa-4c24-b5ab-8bee12281268.png"
+    entrada1: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1c81b404f-6a3e-4ad1-b8a7-6e0de40d9e1c.webp",
+    entrada2: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/175a6405d-f6b4-451a-93ef-a5e5c6542e01.webp",
+    entrada3: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/14b449831-25aa-4c24-b5ab-8bee12281268.webp"
   };
 
   /* ---------- HELPERS ---------- */
@@ -139,7 +139,7 @@
           name: "LA IMPERIAL",
           price: "$34.000",
           tag: "MASTER 2026",
-          img: "img/hamburguesas/Imperial3.JPG",
+          img: "img/hamburguesas/Imperial3.webp",
           desc: "<strong>Ganadora del Burger Master 2026</strong><br>- Pan brioche sellado con mantequilla<br>- 150gr de carne al carbón<br>- Dip de queso de hoja y parmesano<br>- Mermelada de tomate aromatizada con romero<br>- Bocaditos de panceta ahumada<br>- Cebolla crispy<br>- Salsa alemana<br>- Lechuga romana",
           sizes: sizes("$34.000", "$42.500")
         }),
@@ -149,7 +149,7 @@
           price: "$34.000",
           tag: "MASTER 2025",
           warningTag: "CONTIENE MANÍ",
-          img: "img/hamburguesas/Sibarita.jpg",
+          img: "img/hamburguesas/Sibarita.webp",
           desc: "<strong>Ganadora del Burger Master 2025</strong><br>150g de carne al carbón, tiras de pechuga con pesto italiano, cheddar y mozzarella, tocineta ahumada, pimentones asados caramelizados, vegetales frescos, tomate, lechuga romana y pan brioche asado en mantequilla.",
           sizes: sizes("$34.000", "$42.500")
         }),
@@ -158,7 +158,7 @@
           name: "PULLED BELLY",
           price: "$31.000",
           tag: "FRESCA",
-          img: "img/hamburguesas/Pulled.jpeg",
+          img: "img/hamburguesas/Pulled.webp",
           desc: "Pan brioche, 150g carne al carbón, dip de queso de hoja y parmesano, pulled pork en BBQ acevichado, crocantes de chicharrón, cebolla fresca, tomate y lechuga romana.",
           sizes: sizes("$31.000", "$39.500")
         }),
@@ -166,7 +166,7 @@
           n: "04",
           name: "BURGOS TRUFFEL",
           price: "$28.900",
-          img: "img/hamburguesas/Truffel.jpeg",
+          img: "img/hamburguesas/Truffel.webp",
           desc: "Pan brioche, carne al carbón, pollo en crema de trufa, tocineta ahumada, mezcla de quesos, cebolla fresca, lechuga romana y tomate fresco.",
           sizes: sizes("$28.900", "$37.400")
         }),
@@ -174,7 +174,7 @@
           n: "05",
           name: "PAMPA BURGER",
           price: "$25.900",
-          img: "img/hamburguesas/Pampa.jpg",
+          img: "img/hamburguesas/Pampa.webp",
           desc: "Pan brioche, carne al carbón, chorizo a la parrilla, queso cheddar, champiñones salteados al orégano, tomate fresco y lechuga romana.",
           sizes: sizes("$25.900", "$34.400")
         }),
@@ -182,7 +182,7 @@
           n: "06",
           name: "ONION & BACON",
           price: "$25.500",
-          img: "img/hamburguesas/Onion.jpeg",
+          img: "img/hamburguesas/Onion.webp",
           desc: "Pan brioche, carne al carbón, 2 tocinetas ahumadas, mezcla de quesos, aros de cebolla apanados, BBQ de cerveza negra y chipotle, lechuga romana y tomate fresco.",
           sizes: sizes("$25.500", "$34.000")
         }),
@@ -190,7 +190,7 @@
           n: "07",
           name: "SANTERA BURGOS",
           price: "$24.900",
-          img: "img/hamburguesas/Santera.jpeg",
+          img: "img/hamburguesas/Santera.webp",
           desc: "Pan brioche, carne al carbón, mermelada de chorizo en reducción de panela, queso campesino, cebolla fresca, tomate fresco y lechuga romana.",
           sizes: sizes("$24.900", "$33.400")
         }),
@@ -198,7 +198,7 @@
           n: "08",
           name: "CLASSIC BURGOS",
           price: "$21.900",
-          img: "img/hamburguesas/Clasic.avif",
+          img: "img/hamburguesas/Clasic.webp",
           desc: "Pan brioche, carne al carbón, tocineta ahumada, mezcla de quesos, tomate, lechuga romana y opción a elegir.",
           sizes: sizes("$21.900", "$30.400"),
           choices: [
@@ -232,14 +232,14 @@
           name: "PICADA AL ESTILO BURGOS (PARA DOS)",
           price: "$58.900",
           tag: "RECOMENDADO",
-          img: "img/LaBisteca/picada.avif",
+          img: "img/LaBisteca/picada.webp",
           desc: "200gr de carne de res ahumada al carbón, 200gr de filete de pechuga ahumada al carbón, chorizo de ternera, cascos de papa rústica, yuca frita, arepa amarilla y ensalada de la casa."
         }),
         reg({
           n: "02",
           name: "ENTRECOT (CHATAS)",
           price: "$39.900",
-          img: "img/LaBisteca/Entrecot.jpeg",
+          img: "img/LaBisteca/Entrecot.webp",
           desc: "Corte francés del costillar de la res (350 gr) a la parrilla, acompañado de cascos de papas criollas y ensalada de la casa.",
           choices: [
             {
@@ -254,42 +254,42 @@
           n: "03",
           name: "LOMO FINO EN SALSA DE CHAMPIÑONES",
           price: "$39.900",
-          img: "img/LaBisteca/LomoFino.avif",
+          img: "img/LaBisteca/LomoFino.webp",
           desc: "250gr de lomo fino en salsa de champiñones al vino, acompañado de ensalada de la casa y papa en casco."
         }),
         reg({
           n: "04",
           name: "COSTILLAS BBQ",
           price: "$39.900",
-          img: "img/LaBisteca/Costillas.jpeg",
+          img: "img/LaBisteca/Costillas.webp",
           desc: "400gr de costillas de cerdo ahumadas, reducidas en BBQ de cerveza negra y chipotle, acompañadas de cascos de papa rústica y ensalada de la casa."
         }),
         reg({
           n: "05",
           name: "COMBINADO BURGOS",
           price: "$37.900",
-          img: "img/LaBisteca/Combinado.jpeg",
+          img: "img/LaBisteca/Combinado.webp",
           desc: "130gr de chatas, 120gr filete de pechuga, 2 chorizos de cerdo, acompañado de cascos de papa rústica y ensalada de la casa. (Combínalo a tu gusto)."
         }),
         reg({
           n: "06",
           name: "SUPREMA NAPOLITANA",
           price: "$36.000",
-          img: "img/LaBisteca/Suprema.JPG",
+          img: "img/LaBisteca/Suprema.webp",
           desc: "300gr de suprema de pollo con salsa napolitana y queso gouda, acompañado de ensalada de la casa y papa en casco."
         }),
         reg({
           n: "07",
           name: "CORDON BLEU",
           price: "$36.000",
-          img: "img/LaBisteca/CordonBleu.jpeg",
+          img: "img/LaBisteca/CordonBleu.webp",
           desc: "Suprema de pollo rellena de jamón dulce y queso sabana, asada a la parrilla con salsa carbonara, sobre puré de tres papas y ensalada de la casa."
         }),
         reg({
           n: "08",
           name: "ALAS GLASEADAS",
           price: "$29.900",
-          img: "img/LaBisteca/Alitas.jpeg",
+          img: "img/LaBisteca/Alitas.webp",
           desc: "10 piezas de alas glaseadas en salsa mostaza, frutos amarillos y chile dulce o BBQ de cerveza negra, acompañadas de papa rústica."
         })
       ]
@@ -336,7 +336,7 @@
           name: "BURGOS FRIES",
           price: "$30.000",
           tag: "RECOMENDADO",
-          img: "img/Papas/Burgos_fries.jpeg",
+          img: "img/Papas/Burgos_fries.webp",
           desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.",
           addons: [DALE_PODER]
         }),
@@ -344,7 +344,7 @@
           n: "02",
           name: "BURGOS FRIES (PARA DOS)",
           price: "$39.000",
-          img: "img/Papas/Burgos_fries.jpeg",
+          img: "img/Papas/Burgos_fries.webp",
           desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.",
           addons: [DALE_PODER]
         }),
@@ -352,7 +352,7 @@
           n: "03",
           name: "CHICKEN FRIES",
           price: "$25.500",
-          img: "img/Papas/Chicken_fries.jpeg",
+          img: "img/Papas/Chicken_fries.webp",
           desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa.",
           addons: [DALE_PODER]
         }),
@@ -375,14 +375,14 @@
           n: "01",
           name: "DESGRANADO PORTO",
           price: "$29.500",
-          img: "img/maicitos/Porto.JPG",
+          img: "img/maicitos/Porto.webp",
           desc: "Maíz tierno, chorizo, pollo desmechado, champiñones, crema de leche gratinado con queso sabana y parmesano, acompañado de papa rústica y salsa de la casa."
         }),
         reg({
           n: "02",
           name: "DESGRANADO PARRILLERO",
           price: "$27.900",
-          img: "img/maicitos/Parrillero.jpeg",
+          img: "img/maicitos/Parrillero.webp",
           desc: "Maíz tierno, filete de pechuga y res, tocineta ahumada, salsa de queso cheddar, queso campesino, acompañado de papa rústica y salsa de la casa."
         })
       ]
@@ -392,13 +392,13 @@
       label: "COCTELES",
       type: "cards",
       photo: [
-        reg({ n: "01", name: "TIKI BURGOS", price: "$21.000", img: "img/Cocteles/Tiki.avif", desc: "Whiskey, triple sec, ron, miel de agave, lulo, jugo de naranja, piña y zumo de limón." }),
-        reg({ n: "02", name: "PIÑA COLADA", price: "$21.000", img: "img/Cocteles/colada.JPG", desc: "Ron, piña y crema de coco." }),
-        reg({ n: "03", name: "TINTO DE VERANO", price: "$19.000", img: "img/Cocteles/Tinto.avif", desc: "Vino tinto cabernet sauvignon, soda bretaña y limón." }),
-        reg({ n: "04", name: "TOMMY’S MARGARITA", price: "$19.000", img: "img/Cocteles/Margarita.avif", desc: "Tequila, jugo de naranja, zumo de limón, miel de agave y tajín." }),
-        reg({ n: "05", name: "MOJITO TENTATION", price: "$19.000", img: "img/Cocteles/Mojito.avif", desc: "Ron, soda bretaña, zumo de limón, hierbabuena y almíbar." }),
-        reg({ n: "06", name: "PINK DAIQUIRI", price: "$18.000", img: "img/Cocteles/pink.JPG", desc: "Ron, fresa, azúcar y limón." }),
-        reg({ n: "07", name: "PALOMA FRESH", price: "$18.000", img: "img/Cocteles/paloma2.png", desc: "Tequila, jugo de toronja, zumo de limón y tajín." })
+        reg({ n: "01", name: "TIKI BURGOS", price: "$21.000", img: "img/Cocteles/Tiki.webp", desc: "Whiskey, triple sec, ron, miel de agave, lulo, jugo de naranja, piña y zumo de limón." }),
+        reg({ n: "02", name: "PIÑA COLADA", price: "$21.000", img: "img/Cocteles/colada.webp", desc: "Ron, piña y crema de coco." }),
+        reg({ n: "03", name: "TINTO DE VERANO", price: "$19.000", img: "img/Cocteles/Tinto.webp", desc: "Vino tinto cabernet sauvignon, soda bretaña y limón." }),
+        reg({ n: "04", name: "TOMMY’S MARGARITA", price: "$19.000", img: "img/Cocteles/Margarita.webp", desc: "Tequila, jugo de naranja, zumo de limón, miel de agave y tajín." }),
+        reg({ n: "05", name: "MOJITO TENTATION", price: "$19.000", img: "img/Cocteles/Mojito.webp", desc: "Ron, soda bretaña, zumo de limón, hierbabuena y almíbar." }),
+        reg({ n: "06", name: "PINK DAIQUIRI", price: "$18.000", img: "img/Cocteles/pink.webp", desc: "Ron, fresa, azúcar y limón." }),
+        reg({ n: "07", name: "PALOMA FRESH", price: "$18.000", img: "img/Cocteles/paloma2.webp", desc: "Tequila, jugo de toronja, zumo de limón y tajín." })
       ]
     },
 
@@ -413,7 +413,7 @@
               n: "01",
               name: "SODA JAMAIQUINA",
               price: "$12.000",
-              img: "img/bebidas/sodas/Jamaiquina.jpeg",
+              img: "img/bebidas/sodas/Jamaiquina.webp",
               desc: "Soda bretaña con reducción de flor de Jamaica, jugo de arándanos, canela y limón."
             }),
             reg({
@@ -428,14 +428,14 @@
         {
           title: "LIMONADAS",
           items: [
-            reg({ n: "03", name: "LIMONADA DE COCO", price: "$13.000", img: "img/bebidas/limonadas/Coco.JPG" }),
-            reg({ n: "04", name: "LIMON CEREZA", price: "$10.000", img: "img/bebidas/limonadas/Cereza.jpeg" }),
+            reg({ n: "03", name: "LIMONADA DE COCO", price: "$13.000", img: "img/bebidas/limonadas/Coco.webp" }),
+            reg({ n: "04", name: "LIMON CEREZA", price: "$10.000", img: "img/bebidas/limonadas/Cereza.webp" }),
             reg({
               n: "05",
               name: "LIMONADA DE MANGO BICHE",
               tag: "ESCARCHADO CON TAJÍN O SAL",
               price: "$10.000",
-              img: "img/bebidas/limonadas/MangoBiche.jpeg"
+              img: "img/bebidas/limonadas/MangoBiche.webp"
             }),
             reg({ n: "06", name: "LIMONADA DE HIERBABUENA", price: "$8.000", img: "" }),
             reg({ n: "07", name: "LIMONADA DE PANELA PERSONAL", price: "$6.000", img: "" }),
@@ -462,11 +462,11 @@
             reg({ n: "11", name: "FRESA + MANGO PERSONAL", price: "$8.000", img: "" }),
             reg({ n: "12", name: "MARACUYÁ + MANGO PERSONAL", price: "$8.000", img: "" }),
             reg({ n: "13", name: "MANDARINA + NARANJA", price: "$8.000", img: "" }),
-            reg({ n: "14", name: "NARANJA + PIÑA PERSONAL", price: "$8.000", img: "img/bebidas/jugos/NaranjaPina.jpeg" }),
+            reg({ n: "14", name: "NARANJA + PIÑA PERSONAL", price: "$8.000", img: "img/bebidas/jugos/NaranjaPina.webp" }),
             reg({ n: "15", name: "FRESA + MANGO 1.5L", price: "$16.000", img: "" }),
             reg({ n: "16", name: "MARACUYÁ + MANGO 1.5L", price: "$16.000", img: "" }),
             reg({ n: "17", name: "MANDARINA + NARANJA 1.5L", price: "$16.000", img: "" }),
-            reg({ n: "18", name: "NARANJA + PIÑA 1.5L", price: "$16.000", img: "img/bebidas/jugos/NaranjaPina.jpeg" })
+            reg({ n: "18", name: "NARANJA + PIÑA 1.5L", price: "$16.000", img: "img/bebidas/jugos/NaranjaPina.webp" })
           ]
         },
         {
