@@ -63,7 +63,7 @@
 
     <!-- MOBILE NAV -->
     <div id="mnav" class="closed fixed inset-0 z-[150] md:hidden flex flex-col items-center justify-center gap-7"
-        style="background:rgba(12,10,9,.98)">
+        style="background:radial-gradient(ellipse at 90% 10%,rgba(0,18,176,.2),transparent 55%),rgba(12,10,9,.98)">
         <button id="mnavClose" aria-label="Cerrar" class="absolute top-5 right-5 disp text-4xl"
             style="color:var(--rojo)">✕</button>
         <a href="#carta" class="nav-m disp text-4xl" style="color:var(--crema)">LA CARTA</a>
@@ -78,14 +78,14 @@
                 alt="Interior de Burgos Gastro House" class="w-full h-full object-cover"
                 style="filter:saturate(1.1) contrast(1.08) brightness(.6)">
             <div class="absolute inset-0"
-                style="background:linear-gradient(90deg,rgba(12,10,9,.94) 0%,rgba(12,10,9,.7) 45%,rgba(12,10,9,.3) 100%),radial-gradient(80% 60% at 18% 82%,rgba(226,59,46,.3),transparent)">
+                style="background:linear-gradient(90deg,rgba(12,10,9,.94) 0%,rgba(12,10,9,.7) 45%,rgba(12,10,9,.3) 100%),radial-gradient(80% 60% at 18% 82%,rgba(226,59,46,.3),transparent),radial-gradient(70% 60% at 88% 18%,rgba(0,18,176,.3),transparent)">
             </div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-5 w-full py-20 sm:py-28">
             <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6" data-reveal>
                 <span class="chip text-[8px] sm:text-[10px]">GIRÓN · SANTANDER</span>
-                <span class="chip text-[8px] sm:text-[10px]" style="border-color:var(--rojo);color:var(--ambar)">★ BURGER MASTER 2025 &amp; 2026
+                <span class="chip text-[8px] sm:text-[10px]" style="border-color:var(--rojo);color:var(--ambar);box-shadow:inset 2px 0 0 var(--azul)">★  GANADORES DEL BURGER MASTER 2025 &amp; 2026
                     ★</span>
             </div>
 
@@ -115,6 +115,30 @@
             <span class="disp text-xs tracking-[.3em]">BAJA</span>
             <div class="bob text-2xl">↓</div>
         </a>
+    </section>
+
+    <!-- PROMOCION DE CUMPLEANOS -->
+    <section class="birthday-promo-wrap px-4 py-5 sm:px-5 sm:py-7" aria-labelledby="birthdayTitle">
+        <div class="birthday-promo max-w-5xl mx-auto">
+            <div class="birthday-copy">
+                <span class="birthday-kicker">CELEBRA TU CUMPLEAÑOS EN BURGOS</span>
+                <h2 id="birthdayTitle" class="birthday-title disp">
+                    RESERVA DE CUMPLEAÑOS
+                    <span class="birthday-free">GRATIS</span>
+                </h2>
+                <p class="birthday-description">
+                    Tu reserva es completamente <strong>GRATIS</strong> e incluye decoración de la mesa y
+                    <strong>un postre GRATIS.</strong>
+                </p>
+            </div>
+            <div class="birthday-actions">
+                <a id="birthdayWa" class="birthday-button disp" href="#" target="_blank" rel="noopener noreferrer"
+                    aria-label="Reservar cumpleaños por WhatsApp">RESERVA POR WHATSAPP →</a>
+                <a id="birthdayCall" class="birthday-call disp" href="#" aria-label="Llamar para reservar cumpleaños">
+                    O LLÁMANOS
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- MARQUEE -->
@@ -161,7 +185,7 @@
 
     <!-- LA CASA -->
     <section id="casa" class="relative py-16 sm:py-20 md:py-28 px-4 sm:px-5"
-        style="background:linear-gradient(180deg,var(--negro),var(--negro2),var(--negro))">
+        style="background:radial-gradient(80% 45% at 100% 50%,rgba(0,18,176,.1),transparent 78%),linear-gradient(180deg,var(--negro),var(--negro2),var(--negro))">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div class="frame aspect-[4/5]" data-reveal>
                 <img src="https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1af24ee80-3835-48d9-badb-a76b1276f09d.png"
@@ -183,7 +207,7 @@
                         </div>
                     </div>
                     <div class="text-center border-2 border-dashed p-3 sm:p-4" style="border-color:var(--linea)">
-                        <div class="disp text-3xl sm:text-4xl" style="color:var(--ambar)">100%</div>
+                        <div class="disp text-3xl sm:text-4xl" style="color:var(--crema);text-shadow:0 0 8px var(--azul),0 2px 0 var(--azul)">100%</div>
                         <div class="text-[10px] sm:text-[11px] tracking-widest mt-1" style="color:var(--crema-fade)">AL CARBÓN</div>
                     </div>
                     <div class="text-center border-2 border-dashed p-3 sm:p-4" style="border-color:var(--linea)">

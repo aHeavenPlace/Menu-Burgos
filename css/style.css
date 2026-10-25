@@ -2,6 +2,9 @@
     --rojo: #e23b2e;
     --rojo-deep: #9e1b15;
     --rojo-glow: #ff4d3d;
+    --azul: #0012B0;
+    --azul-soft: rgba(0, 18, 176, .12);
+    --azul-glow: rgba(0, 18, 176, .38);
     --naranja: #f77f00;
     --ambar: #fcbf49;
     --crema: #f3e7d3;
@@ -24,11 +27,65 @@ html {
 }
 
 body {
-    background: var(--negro);
+    background:
+        radial-gradient(ellipse at 92% 18%, rgba(0, 18, 176, .1), transparent 38%),
+        radial-gradient(ellipse at 8% 68%, rgba(226, 59, 46, .055), transparent 34%),
+        var(--negro);
     color: var(--crema);
     overflow-x: hidden;
     margin: 0;
     -webkit-tap-highlight-color: transparent
+}
+
+.bcard .p-5 {
+    background-image:
+        repeating-linear-gradient(0deg, transparent 0 28px, rgba(252, 191, 73, .018) 28px 29px, transparent 29px 31px),
+        linear-gradient(135deg, rgba(0, 18, 176, .035), transparent 58%, rgba(226, 59, 46, .025))
+}
+
+#top::after {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    width: clamp(130px, 27vw, 380px);
+    height: clamp(240px, 54vh, 520px);
+    content: "";
+    pointer-events: none;
+    background: radial-gradient(ellipse, rgba(252, 191, 73, .12), rgba(0, 18, 176, .08) 36%, transparent 72%);
+    opacity: .5;
+    animation: pub-lamp-glow 8s ease-in-out infinite alternate
+}
+
+@keyframes pub-lamp-glow {
+    to {
+        opacity: .82
+    }
+}
+
+section:not(#top) {
+    position: relative
+}
+
+#carta,
+#contacto,
+#casa {
+    isolation: isolate
+}
+
+#carta::before,
+#contacto::before,
+#casa::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(0deg, transparent 0 46px, rgba(252, 191, 73, .018) 46px 47px, transparent 47px 49px),
+        linear-gradient(115deg, rgba(0, 18, 176, .035), transparent 36%, rgba(226, 59, 46, .025))
 }
 
 .disp {
@@ -45,15 +102,16 @@ img {
     max-width: 100%
 }
 
-/* film grain + vignette */
+/* Lightweight CSS grain and pub-style wood texture */
 .grain {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 60;
-    opacity: .06;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+    opacity: .035;
+    background-image:
+        repeating-linear-gradient(0deg, transparent 0 3px, rgba(243, 231, 211, .16) 3px 4px, transparent 4px 9px),
+        repeating-linear-gradient(91deg, rgba(243, 231, 211, .12) 0 1px, transparent 1px 17px)
 }
 
 .vignette {
@@ -111,7 +169,7 @@ img {
     display: block;
     height: 100%;
     width: 0;
-    background: linear-gradient(90deg, var(--rojo), var(--ambar));
+    background: linear-gradient(90deg, var(--rojo), var(--azul), var(--ambar));
     animation: load 2s ease forwards
 }
 
@@ -130,7 +188,7 @@ img {
 /* neon */
 .neon {
     color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 12px var(--rojo-glow), 0 0 26px var(--rojo), 0 0 46px var(--rojo-deep);
+    text-shadow: 0 0 5px #fff, 0 0 12px var(--rojo-glow), 0 0 26px var(--rojo), 0 0 42px var(--azul-glow), 0 0 46px var(--rojo-deep);
     animation: flick 6s infinite
 }
 
@@ -162,7 +220,8 @@ img {
 .outline-rojo {
     color: transparent;
     -webkit-text-stroke: 2px var(--rojo);
-    text-stroke: 2px var(--rojo)
+    text-stroke: 2px var(--rojo);
+    text-shadow: 2px 2px 0 var(--azul-glow)
 }
 
 @media(max-width:640px) {
@@ -180,7 +239,7 @@ img {
     background: var(--rojo);
     color: var(--crema);
     border: 2px solid var(--negro);
-    box-shadow: 4px 4px 0 var(--ambar);
+    box-shadow: 3px 3px 0 var(--azul), 6px 6px 0 var(--ambar);
     transition: transform .18s ease, box-shadow .18s ease, background .2s;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent
@@ -188,7 +247,7 @@ img {
 
 .sticker:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 var(--naranja);
+    box-shadow: 4px 4px 0 var(--azul), 8px 8px 0 var(--naranja);
     background: var(--rojo-deep)
 }
 
@@ -210,7 +269,7 @@ img {
     transition: transform .18s ease, box-shadow .18s ease, background .2s, border-color .2s;
     cursor: pointer;
     text-align: center;
-    box-shadow: 3px 3px 0 var(--ambar);
+    box-shadow: 2px 2px 0 var(--azul), 5px 5px 0 var(--ambar);
     line-height: 1;
     font-size: .7rem;
     letter-spacing: .12em
@@ -218,7 +277,7 @@ img {
 
 .order-link:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0 var(--naranja);
+    box-shadow: 4px 4px 0 var(--azul), 7px 7px 0 var(--naranja);
     background: rgba(226, 59, 46, .2);
     border-color: var(--rojo)
 }
@@ -246,9 +305,177 @@ img {
 }
 
 .details-link:hover {
-    border-color: var(--ambar);
+    border-color: var(--azul);
     color: var(--ambar);
+    box-shadow: 0 0 12px var(--azul-glow);
     transform: translateY(-1px)
+}
+
+.dale-poder-note {
+    display: grid;
+    gap: 4px;
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-left: 4px solid var(--azul);
+    background: linear-gradient(100deg, rgba(0, 18, 176, .2), rgba(0, 18, 176, .04));
+    color: var(--crema-dim);
+    cursor: default;
+    font-size: .76rem;
+    line-height: 1.4
+}
+
+.dale-poder-title {
+    color: var(--crema);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.08rem;
+    letter-spacing: .05em;
+    line-height: 1.1
+}
+
+.dale-poder-title strong {
+    color: var(--ambar);
+    font: inherit
+}
+
+#carta {
+    background-image: radial-gradient(58% 30% at 100% 24%, rgba(0, 18, 176, .08), transparent 100%)
+}
+
+#contacto {
+    background-image: radial-gradient(52% 45% at 0% 48%, rgba(0, 18, 176, .1), transparent 100%)
+}
+
+.birthday-promo-wrap {
+    background: radial-gradient(70% 130% at 0% 50%, rgba(0, 18, 176, .12), transparent 72%);
+}
+
+.birthday-promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+    padding: clamp(18px, 4vw, 32px);
+    border: 1px solid rgba(0, 18, 176, .72);
+    border-left: 5px solid var(--azul);
+    background: linear-gradient(110deg, rgba(0, 18, 176, .13), rgba(12, 10, 9, .96) 52%, rgba(226, 59, 46, .09));
+    box-shadow: 0 14px 36px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(252, 191, 73, .2)
+}
+
+.birthday-copy {
+    min-width: 0
+}
+
+.birthday-kicker {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background: var(--azul);
+    color: #fff;
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .14em
+}
+
+.birthday-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin: 0;
+    color: var(--crema);
+    font-size: clamp(1.65rem, 4vw, 2.7rem);
+    line-height: .98
+}
+
+.birthday-free {
+    display: inline-block;
+    padding: 3px 10px 1px;
+    background: var(--rojo);
+    color: #fff;
+    box-shadow: 3px 3px 0 var(--azul)
+}
+
+.birthday-description {
+    max-width: 600px;
+    margin: 10px 0 0;
+    color: var(--crema-dim);
+    font-size: .9rem;
+    line-height: 1.5
+}
+
+.birthday-description strong {
+    color: #fff
+}
+
+.birthday-actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 205px
+}
+
+.birthday-button {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border: 2px solid var(--rojo);
+    background: var(--rojo);
+    color: #fff;
+    text-align: center;
+    letter-spacing: .06em;
+    box-shadow: 3px 3px 0 var(--azul);
+    transition: background .2s ease, transform .18s ease
+}
+
+.birthday-button:hover {
+    background: var(--rojo-deep);
+    transform: translateY(-2px)
+}
+
+.birthday-call {
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid var(--linea);
+    color: var(--crema-dim);
+    text-align: center;
+    font-size: .9rem;
+    letter-spacing: .06em;
+    transition: border-color .2s ease, color .2s ease
+}
+
+.birthday-call:hover {
+    border-color: var(--azul);
+    color: var(--crema)
+}
+
+@media(max-width:640px) {
+    .birthday-promo {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 16px
+    }
+
+    .birthday-kicker {
+        font-size: .58rem
+    }
+
+    .birthday-title {
+        font-size: clamp(1.65rem, 8vw, 2.2rem)
+    }
+
+    .birthday-description {
+        font-size: .84rem
+    }
+
+    .birthday-actions {
+        min-width: 0
+    }
 }
 
 .card-actions {
@@ -282,13 +509,15 @@ img {
     gap: 12px;
     padding: 12px 14px;
     border: 1px solid var(--linea);
+    border-left: 2px solid rgba(0, 18, 176, .55);
     background: rgba(255, 255, 255, .02);
     transition: border-color .2s ease, transform .2s ease;
     flex-wrap: wrap;
 }
 
 .mini-extra-row:hover {
-    border-color: rgba(226, 59, 46, .6);
+    border-color: var(--azul);
+    box-shadow: inset 3px 0 0 var(--rojo), 0 0 14px var(--azul-glow);
     transform: translateX(3px)
 }
 
@@ -384,8 +613,9 @@ img {
     justify-content: center;
     margin-bottom: 12px;
     padding: 6px 10px;
-    border: 1px solid rgba(252, 191, 73, .5);
-    background: rgba(252, 191, 73, .08);
+    border: 1px solid var(--azul);
+    background: linear-gradient(100deg, var(--azul-soft), rgba(252, 191, 73, .08));
+    box-shadow: inset 3px 0 0 var(--rojo);
     color: var(--ambar);
     font-size: .66rem;
     font-weight: 700;
@@ -404,14 +634,16 @@ img {
 
 .order-panel {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--linea);
+    border: 1px solid rgba(0, 18, 176, .45);
+    box-shadow: inset 3px 0 0 rgba(226, 59, 46, .4);
     padding: 18px;
     min-height: 100%
 }
 
 .order-catalog {
     background: rgba(255, 255, 255, 0.015);
-    border: 1px solid var(--linea);
+    border: 1px solid rgba(0, 18, 176, .45);
+    box-shadow: inset 3px 0 0 rgba(226, 59, 46, .4);
     padding: 18px;
     min-height: 100%
 }
@@ -424,8 +656,9 @@ img {
 }
 
 .order-category-block {
-    border: 1px solid var(--linea);
+    border: 1px solid rgba(0, 18, 176, .38);
     background: rgba(255, 255, 255, 0.01);
+    box-shadow: inset 2px 0 0 rgba(226, 59, 46, .45);
     padding: 10px
 }
 
@@ -449,7 +682,7 @@ img {
     justify-content: space-between;
     gap: 12px;
     padding: 10px 12px;
-    border: 1px solid var(--linea);
+    border: 1px solid rgba(0, 18, 176, .28);
     background: rgba(255, 255, 255, 0.02)
 }
 
@@ -470,7 +703,7 @@ img {
 
 .mini-remove:hover,
 .mini-add:hover {
-    border-color: var(--rojo);
+    border-color: var(--azul);
     color: var(--ambar)
 }
 
@@ -487,8 +720,8 @@ img {
 
 .map-frame {
     min-height: 320px;
-    border: 2px solid var(--linea);
-    box-shadow: 8px 8px 0 var(--rojo-deep);
+    border: 2px solid var(--azul);
+    box-shadow: 6px 6px 0 var(--azul), 10px 10px 0 var(--rojo-deep);
     overflow: hidden;
 }
 
@@ -508,24 +741,25 @@ img {
 
 @media(max-width:640px) {
     .sticker {
-        box-shadow: 3px 3px 0 var(--ambar);
+        box-shadow: 2px 2px 0 var(--azul), 5px 5px 0 var(--ambar);
         padding: 8px 16px;
         font-size: .85rem
     }
 }
 
 .ghost {
-    border: 2px solid var(--crema-dim);
+    border: 2px solid var(--azul);
     color: var(--crema);
+    box-shadow: inset 3px 0 0 var(--rojo);
     transition: .2s;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent
 }
 
 .ghost:hover {
-    border-color: var(--ambar);
-    color: var(--ambar);
-    box-shadow: 0 0 18px rgba(252, 191, 73, .25)
+    border-color: var(--azul);
+    color: var(--crema);
+    box-shadow: 0 0 18px var(--azul-glow), 0 0 18px rgba(252, 191, 73, .16)
 }
 
 @media(max-width:640px) {
@@ -554,7 +788,8 @@ img {
 .seal .ring2 {
     position: absolute;
     inset: 6px;
-    border: 1px solid var(--rojo);
+    border: 1px solid var(--azul);
+    box-shadow: 0 0 10px var(--azul-glow);
     border-radius: 50%;
     opacity: .6
 }
@@ -569,6 +804,7 @@ img {
 .hdr {
     background: linear-gradient(180deg, rgba(12, 10, 9, .96), rgba(12, 10, 9, .72));
     border-bottom: 1px solid var(--linea);
+    box-shadow: 0 1px 0 rgba(0, 18, 176, .38);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: opacity .2s ease, visibility .2s ease, transform .2s ease
@@ -612,7 +848,8 @@ body.modal-active .hdr {
     font-size: clamp(.7rem, 1vw, 1.15rem);
     letter-spacing: .28em;
     text-transform: uppercase;
-    opacity: .95
+    opacity: .95;
+    text-shadow: 1px 1px 0 var(--azul-glow)
 }
 
 .brand-by {
@@ -672,8 +909,8 @@ body.modal-active .hdr {
     right: 0;
     bottom: -6px;
     height: 2px;
-    background: var(--rojo);
-    box-shadow: 0 0 10px var(--rojo-glow);
+    background: var(--azul);
+    box-shadow: 0 0 10px rgba(0, 18, 176, .75);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .3s
@@ -691,7 +928,12 @@ body.modal-active .hdr {
     border-top: 2px solid var(--linea);
     border-bottom: 2px solid var(--linea);
     background: var(--negro2);
-    padding: 10px 0
+    padding: 10px 0;
+    box-shadow: inset 0 1px 0 var(--azul), inset 0 -1px 0 var(--rojo)
+}
+
+footer {
+    box-shadow: inset 0 1px 0 var(--azul-glow)
 }
 
 .marquee .track {
@@ -740,8 +982,8 @@ body.modal-active .hdr {
     right: 0;
     bottom: -6px;
     height: 3px;
-    background: var(--rojo);
-    box-shadow: 0 0 12px var(--rojo-glow)
+    background: linear-gradient(90deg, var(--rojo), var(--azul));
+    box-shadow: 0 0 12px var(--azul-glow)
 }
 
 @media(max-width:640px) {
@@ -758,7 +1000,8 @@ body.modal-active .hdr {
 /* burger photo card */
 .bcard {
     background: var(--negro2);
-    border: 2px solid var(--linea);
+    border: 2px solid rgba(0, 18, 176, .5);
+    box-shadow: inset 0 2px 0 var(--azul);
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -769,7 +1012,7 @@ body.modal-active .hdr {
 .bcard:hover {
     transform: translateY(-8px);
     border-color: var(--rojo);
-    box-shadow: 0 22px 40px rgba(0, 0, 0, .6), 0 0 0 1px var(--rojo-deep)
+    box-shadow: inset 0 2px 0 var(--azul), 0 22px 40px rgba(0, 0, 0, .6), 0 0 0 1px var(--rojo-deep), 0 0 18px var(--azul-glow)
 }
 
 .bcard .ph {
@@ -816,6 +1059,10 @@ body.modal-active .hdr {
     z-index: 2
 }
 
+.bcard:nth-child(3n) .tag {
+    background: var(--azul)
+}
+
 @media(max-width:640px) {
     .bcard .num {
         font-size: 1.4rem;
@@ -831,7 +1078,7 @@ body.modal-active .hdr {
 }
 
 .ticket {
-    background: repeating-linear-gradient(90deg, var(--ambar) 0 8px, transparent 8px 12px);
+    background: linear-gradient(90deg, var(--rojo) 0 34%, var(--azul) 34% 67%, var(--ambar) 67% 100%);
     height: 6px
 }
 
@@ -842,14 +1089,14 @@ body.modal-active .hdr {
     gap: 8px;
     padding: 12px 6px;
     cursor: pointer;
-    border-bottom: 1px dashed var(--linea);
+    border-bottom: 1px dashed rgba(0, 18, 176, .38);
     transition: transform .3s ease, background .3s;
     -webkit-tap-highlight-color: transparent
 }
 
 .mrow:hover {
     transform: translateX(6px);
-    background: linear-gradient(90deg, rgba(226, 59, 46, .08), transparent)
+    background: linear-gradient(90deg, rgba(226, 59, 46, .1), rgba(0, 18, 176, .1), transparent)
 }
 
 .mrow .idx {
@@ -861,7 +1108,7 @@ body.modal-active .hdr {
 }
 
 .mrow:hover .idx {
-    color: var(--rojo)
+    color: var(--azul)
 }
 
 .mrow .nm {
@@ -904,6 +1151,7 @@ body.modal-active .hdr {
 }
 
 .mrow:hover .star {
+    color: var(--azul);
     opacity: 1
 }
 
@@ -941,7 +1189,7 @@ body.modal-active .hdr {
     position: absolute;
     width: 14px;
     height: 14px;
-    border: 2px solid var(--rojo)
+    border: 2px solid var(--azul)
 }
 
 .frame::before {
@@ -1038,14 +1286,14 @@ body.modal-active .hdr {
 
 .modal .box {
     background: var(--negro2);
-    border: 2px solid var(--rojo);
+    border: 2px solid var(--azul);
     max-width: 520px;
     width: 100%;
     max-height: calc(100vh - 100px);
     overflow: auto;
     transform: scale(.85) translateY(20px);
     transition: .4s cubic-bezier(.2, .8, .2, 1);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .7), 0 0 40px rgba(226, 59, 46, .25);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .7), 0 0 28px rgba(226, 59, 46, .2), 0 0 40px var(--azul-glow);
     position: relative
 }
 
@@ -1061,7 +1309,7 @@ body.modal-active .hdr {
     height: 34px;
     border-radius: 50%;
     background: rgba(12, 10, 9, .7);
-    border: 1px solid var(--rojo);
+    border: 1px solid var(--azul);
     color: var(--crema);
     display: flex;
     align-items: center;
@@ -1075,7 +1323,7 @@ body.modal-active .hdr {
 }
 
 .modal .x:hover {
-    background: var(--rojo);
+    background: var(--azul);
     transform: rotate(90deg)
 }
 
@@ -1144,12 +1392,12 @@ body.modal-active .hdr {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--rojo-deep);
+    background: linear-gradient(var(--rojo-deep), var(--azul));
     border-radius: 4px
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--rojo)
+    background: linear-gradient(var(--rojo), var(--azul))
 }
 
 @media(max-width:640px) {
@@ -1159,12 +1407,33 @@ body.modal-active .hdr {
 }
 
 .chip {
-    border: 1px solid var(--crema-dim);
+    position: relative;
+    border: 1px solid rgba(0, 18, 176, .65);
     color: var(--crema-dim);
+    box-shadow: inset 2px 0 0 rgba(226, 59, 46, .6);
     font-size: .55rem;
     letter-spacing: .2em;
     padding: 4px 10px;
     display: inline-block
+}
+
+.chip::before,
+.chip::after {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--ambar);
+    content: "";
+    transform: rotate(45deg);
+    vertical-align: 2px
+}
+
+.chip::before {
+    margin-right: 7px
+}
+
+.chip::after {
+    margin-left: 7px
 }
 
 @media(max-width:640px) {
@@ -1212,6 +1481,7 @@ body.modal-active .hdr {
 
 .beverage-title>span:first-child {
     color: var(--rojo);
+    text-shadow: 2px 2px 0 var(--azul-glow);
     font-size: 24px;
     font-weight: 800;
     white-space: nowrap
@@ -1220,7 +1490,7 @@ body.modal-active .hdr {
 .beverage-line {
     flex: 1;
     height: 2px;
-    background: var(--linea);
+    background: linear-gradient(90deg, var(--azul), var(--rojo), var(--linea));
 }
 
 .beverage-items {
@@ -1236,6 +1506,7 @@ body.modal-active .hdr {
     background: var(--negro2);
     border: 2px solid var(--linea);
     border-radius: 8px;
+    box-shadow: inset 4px 0 0 rgba(0, 18, 176, .58);
     overflow: hidden;
     cursor: pointer;
     transition: transform .25s ease, border-color .25s ease;
@@ -1244,7 +1515,8 @@ body.modal-active .hdr {
 
 .beverage-card:hover {
     transform: translateY(-3px);
-    border-color: var(--rojo)
+    border-color: var(--azul);
+    box-shadow: inset 3px 0 0 var(--rojo), 0 0 16px var(--azul-glow)
 }
 
 .beverage-img {
@@ -1353,6 +1625,51 @@ body.modal-active .hdr {
     }
 }
 
+/* Pub timber, brass trim and restrained ambient light */
+.hdr,
+.marquee,
+#tabs,
+footer {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, .14), transparent 48%, rgba(0, 0, 0, .16)),
+        repeating-linear-gradient(0deg, transparent 0 19px, rgba(252, 191, 73, .028) 19px 20px, transparent 20px 22px),
+        repeating-linear-gradient(90deg, rgba(252, 191, 73, .018) 0 1px, transparent 1px 148px)
+}
+
+.hdr::after {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--rojo), var(--azul) 48%, var(--ambar));
+    content: "";
+    pointer-events: none
+}
+
+.hours-status.open i {
+    animation: pub-status-glow 2.8s ease-in-out infinite alternate
+}
+
+@keyframes pub-status-glow {
+    to {
+        opacity: .5;
+        transform: scale(.82)
+    }
+}
+
+@media(max-width:640px) {
+    .grain {
+        opacity: .022
+    }
+
+    #top::after {
+        top: 14%;
+        right: -10%;
+        opacity: .32
+    }
+}
+
 @media (max-width: 480px) {
     .beverage-title>span:first-child {
         font-size: 18px;
@@ -1411,6 +1728,7 @@ body.modal-active .hdr {
     -webkit-backdrop-filter: blur(12px);
 
     border-bottom: 1px solid var(--linea);
+    box-shadow: 0 1px 0 var(--azul-glow);
 
     padding: 14px 10px;
     transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
@@ -1529,7 +1847,7 @@ body.modal-active #tabs {
     background: var(--rojo);
     color: var(--crema);
     border: 2px solid var(--negro);
-    box-shadow: 4px 4px 0 var(--ambar);
+    box-shadow: 3px 3px 0 var(--azul), 6px 6px 0 var(--ambar);
     cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: .12em;
@@ -1543,7 +1861,7 @@ body.modal-active #tabs {
 
 .order-fab:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 var(--naranja)
+    box-shadow: 4px 4px 0 var(--azul), 8px 8px 0 var(--naranja)
 }
 
 .order-fab-count {
@@ -1620,7 +1938,7 @@ body.modal-active .order-fab {
 }
 
 .qty-btn:hover {
-    border-color: var(--rojo);
+    border-color: var(--azul);
     color: var(--ambar)
 }
 
@@ -1684,7 +2002,8 @@ body.modal-active .order-fab {
 .option-chip.on {
     border-color: var(--rojo);
     color: var(--ambar);
-    background: rgba(226, 59, 46, .12)
+    background: linear-gradient(110deg, rgba(226, 59, 46, .12), var(--azul-soft));
+    box-shadow: inset 0 -2px 0 var(--azul)
 }
 
 .option-chip small {
@@ -1735,18 +2054,6 @@ body.modal-active .order-fab {
     letter-spacing: .16em;
     font-size: 1.1rem;
     border: 1px dashed var(--linea)
-}
-
-.category-note {
-    margin: 0 auto 18px;
-    max-width: 640px;
-    text-align: center;
-    color: var(--crema-dim);
-    font-size: .82rem;
-    line-height: 1.45;
-    padding: 10px 14px;
-    border: 1px dashed var(--linea);
-    background: rgba(252, 191, 73, .05)
 }
 
 .hours-row {

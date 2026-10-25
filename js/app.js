@@ -121,11 +121,9 @@
   const idxOf = (o) => ALL.indexOf(o);
 
   const DALE_PODER = {
-    id: "dale-poder",
     label: "Dale Poder a tus Papas",
-    price: "$4.500",
-    priceValue: 4500,
-    hint: "Tocineta ahumada, salsa de la casa, cheddar y queso campesino"
+    price: "$5.000",
+    description: "Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado."
   };
 
   /* ---------- MENU ---------- */
@@ -133,12 +131,13 @@
     burgers: {
       label: "HAMBURGUESAS",
       type: "cards",
+      showDalePoder: true,
       photo: [
         reg({
           n: "01",
           name: "LA IMPERIAL",
-          price: "$34.000",
-          tag: "MASTER 2026",
+          price: "$35.000",
+          tag: "GANADORA DEL BURGER MASTER 2026",
           img: "img/hamburguesas/Imperial3.webp",
           desc: "<strong>Ganadora del Burger Master 2026</strong><br>- Pan brioche sellado con mantequilla<br>- 150gr de carne al carbón<br>- Dip de queso de hoja y parmesano<br>- Mermelada de tomate aromatizada con romero<br>- Bocaditos de panceta ahumada<br>- Cebolla crispy<br>- Salsa alemana<br>- Lechuga romana",
           sizes: sizes("$34.000", "$42.500")
@@ -146,8 +145,8 @@
         reg({
           n: "02",
           name: "SIBARITA",
-          price: "$34.000",
-          tag: "MASTER 2025",
+          price: "$35.000",
+          tag: " GANADORA DEL BURGER MASTER 2025",
           warningTag: "CONTIENE MANÍ",
           img: "img/hamburguesas/Sibarita.webp",
           desc: "<strong>Ganadora del Burger Master 2025</strong><br>150g de carne al carbón, tiras de pechuga con pesto italiano, cheddar y mozzarella, tocineta ahumada, pimentones asados caramelizados, vegetales frescos, tomate, lechuga romana y pan brioche asado en mantequilla.",
@@ -156,16 +155,15 @@
         reg({
           n: "03",
           name: "PULLED BELLY",
-          price: "$31.000",
-          tag: "FRESCA",
+          price: "$32.000",
           img: "img/hamburguesas/Pulled.webp",
-          desc: "Pan brioche, 150g carne al carbón, dip de queso de hoja y parmesano, pulled pork en BBQ acevichado, crocantes de chicharrón, cebolla fresca, tomate y lechuga romana.",
+          desc: "Pan brioche, 150g carne al carbón, dip de queso de hoja y parmesano, pulled pork en BBQ acevichado, aros de cebolla crujientes, tomate y lechuga romana.",
           sizes: sizes("$31.000", "$39.500")
         }),
         reg({
           n: "04",
           name: "BURGOS TRUFFEL",
-          price: "$28.900",
+          price: "$31.00",
           img: "img/hamburguesas/Truffel.webp",
           desc: "Pan brioche, carne al carbón, pollo en crema de trufa, tocineta ahumada, mezcla de quesos, cebolla fresca, lechuga romana y tomate fresco.",
           sizes: sizes("$28.900", "$37.400")
@@ -173,7 +171,7 @@
         reg({
           n: "05",
           name: "PAMPA BURGER",
-          price: "$25.900",
+          price: "$28.000",
           img: "img/hamburguesas/Pampa.webp",
           desc: "Pan brioche, carne al carbón, chorizo a la parrilla, queso cheddar, champiñones salteados al orégano, tomate fresco y lechuga romana.",
           sizes: sizes("$25.900", "$34.400")
@@ -181,7 +179,7 @@
         reg({
           n: "06",
           name: "ONION & BACON",
-          price: "$25.500",
+          price: "$27.000",
           img: "img/hamburguesas/Onion.webp",
           desc: "Pan brioche, carne al carbón, 2 tocinetas ahumadas, mezcla de quesos, aros de cebolla apanados, BBQ de cerveza negra y chipotle, lechuga romana y tomate fresco.",
           sizes: sizes("$25.500", "$34.000")
@@ -189,7 +187,7 @@
         reg({
           n: "07",
           name: "SANTERA BURGOS",
-          price: "$24.900",
+          price: "$27.000",
           img: "img/hamburguesas/Santera.webp",
           desc: "Pan brioche, carne al carbón, mermelada de chorizo en reducción de panela, queso campesino, cebolla fresca, tomate fresco y lechuga romana.",
           sizes: sizes("$24.900", "$33.400")
@@ -197,7 +195,7 @@
         reg({
           n: "08",
           name: "CLASSIC BURGOS",
-          price: "$21.900",
+          price: "$24.000",
           img: "img/hamburguesas/Clasic.webp",
           desc: "Pan brioche, carne al carbón, tocineta ahumada, mezcla de quesos, tomate, lechuga romana y opción a elegir.",
           sizes: sizes("$21.900", "$30.400"),
@@ -226,11 +224,12 @@
     la_bisteca: {
       label: "LA BISTECA",
       type: "cards",
+      showDalePoder: true,
       photo: [
         reg({
           n: "01",
           name: "PICADA AL ESTILO BURGOS (PARA DOS)",
-          price: "$58.900",
+          price: "$65.000",
           tag: "RECOMENDADO",
           img: "img/LaBisteca/picada.webp",
           desc: "200gr de carne de res ahumada al carbón, 200gr de filete de pechuga ahumada al carbón, chorizo de ternera, cascos de papa rústica, yuca frita, arepa amarilla y ensalada de la casa."
@@ -238,7 +237,7 @@
         reg({
           n: "02",
           name: "ENTRECOT (CHATAS)",
-          price: "$39.900",
+          price: "$45.000",
           img: "img/LaBisteca/Entrecot.webp",
           desc: "Corte francés del costillar de la res (350 gr) a la parrilla, acompañado de cascos de papas criollas y ensalada de la casa.",
           choices: [
@@ -253,42 +252,42 @@
         reg({
           n: "03",
           name: "LOMO FINO EN SALSA DE CHAMPIÑONES",
-          price: "$39.900",
+          price: "$45.000",
           img: "img/LaBisteca/LomoFino.webp",
           desc: "250gr de lomo fino en salsa de champiñones al vino, acompañado de ensalada de la casa y papa en casco."
         }),
         reg({
           n: "04",
           name: "COSTILLAS BBQ",
-          price: "$39.900",
+          price: "$45.000",
           img: "img/LaBisteca/Costillas.webp",
           desc: "400gr de costillas de cerdo ahumadas, reducidas en BBQ de cerveza negra y chipotle, acompañadas de cascos de papa rústica y ensalada de la casa."
         }),
         reg({
           n: "05",
           name: "COMBINADO BURGOS",
-          price: "$37.900",
+          price: "$42.000",
           img: "img/LaBisteca/Combinado.webp",
           desc: "130gr de chatas, 120gr filete de pechuga, 2 chorizos de cerdo, acompañado de cascos de papa rústica y ensalada de la casa. (Combínalo a tu gusto)."
         }),
         reg({
           n: "06",
           name: "SUPREMA NAPOLITANA",
-          price: "$36.000",
+          price: "$40.000",
           img: "img/LaBisteca/Suprema.webp",
           desc: "300gr de suprema de pollo con salsa napolitana y queso gouda, acompañado de ensalada de la casa y papa en casco."
         }),
         reg({
           n: "07",
           name: "CORDON BLEU",
-          price: "$36.000",
+          price: "$40.000",
           img: "img/LaBisteca/CordonBleu.webp",
           desc: "Suprema de pollo rellena de jamón dulce y queso sabana, asada a la parrilla con salsa carbonara, sobre puré de tres papas y ensalada de la casa."
         }),
         reg({
           n: "08",
           name: "ALAS GLASEADAS",
-          price: "$29.900",
+          price: "$32.000",
           img: "img/LaBisteca/Alitas.webp",
           desc: "10 piezas de alas glaseadas en salsa mostaza, frutos amarillos y chile dulce o BBQ de cerveza negra, acompañadas de papa rústica."
         })
@@ -300,27 +299,27 @@
       type: "list2col",
       cols: [
         [
-          reg({ n: "01", name: "CARNE DE HAMBURGUESA 150GR MAS QUESO", price: "$8.500" }),
-          reg({ n: "02", name: "CARNE DE RES A LA PARRILLA", price: "$7.000" }),
-          reg({ n: "03", name: "POLLO EN CREMA DE TRUFA BLANCA", price: "$6.000" }),
-          reg({ n: "04", name: "FILETE DE PECHUGA", price: "$6.000" }),
+          reg({ n: "01", name: "CARNE DE HAMBURGUESA 150GR MAS QUESO", price: "$10.000" }),
+          reg({ n: "02", name: "CARNE DE RES A LA PARRILLA", price: "8.000" }),
+          reg({ n: "03", name: "POLLO EN CREMA DE TRUFA BLANCA", price: "$7.000" }),
+          reg({ n: "04", name: "FILETE DE PECHUGA", price: "$7.000" }),
           reg({ n: "05", name: "CHORIZO A LA PARRILLA", price: "$4.000" }),
           reg({ n: "06", name: "MERMELADA DE CHORIZO", price: "$4.000" }),
           reg({ n: "07", name: "TOCINETA AHUMADA X2", price: "$5.000" }),
           reg({ n: "08", name: "SALCHICHA", price: "$6.000" })
         ],
         [
-          reg({ n: "09", name: "PULLED PORK", price: "$6.000" }),
-          reg({ n: "10", name: "PAPA A LA FRANCESA 150GR", price: "$6.000" }),
-          reg({ n: "11", name: "AROS DE CEBOLLA APANADOS X2", price: "$4.000" }),
+          reg({ n: "09", name: "PULLED PORK", price: "$7.000" }),
+          reg({ n: "10", name: "PAPA A LA FRANCESA 150GR", price: "$7.000" }),
+          reg({ n: "11", name: "AROS DE CEBOLLA APANADOS X2", price: "$5.000" }),
           reg({ n: "12", name: "JALAPEÑOS", price: "$3.000" }),
-          reg({ n: "13", name: "PEPINILLOS", price: "$3.000" }),
+          reg({ n: "13", name: "PEPINILLOS", price: "$3.500" }),
           reg({ n: "14", name: "MAÍZ 180GR", price: "$5.000" }),
           reg({
             n: "15",
             name: "DALE PODER A TUS PAPAS",
-            price: "$4.500",
-            desc: "Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado."
+            price: DALE_PODER.price,
+            desc: DALE_PODER.description
           })
         ]
       ]
@@ -329,40 +328,36 @@
     papas: {
       label: "PAPAS BURGOS HOUSE",
       type: "cards",
-      categoryNote: `Puedes añadir <strong>${DALE_PODER.label}</strong> (+${DALE_PODER.price}): ${DALE_PODER.hint}.`,
+      showDalePoder: true,
       photo: [
         reg({
           n: "01",
           name: "BURGOS FRIES",
-          price: "$30.000",
+          price: "$33.000",
           tag: "RECOMENDADO",
           img: "img/Papas/Burgos_fries.webp",
-          desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.",
-          addons: [DALE_PODER]
+          desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra."
         }),
         reg({
           n: "02",
           name: "BURGOS FRIES (PARA DOS)",
-          price: "$39.000",
+          price: "$43.000",
           img: "img/Papas/Burgos_fries.webp",
-          desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.",
-          addons: [DALE_PODER]
+          desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra."
         }),
         reg({
           n: "03",
           name: "CHICKEN FRIES",
-          price: "$25.500",
+          price: "$28.000",
           img: "img/Papas/Chicken_fries.webp",
-          desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa.",
-          addons: [DALE_PODER]
+          desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa."
         }),
         reg({
           n: "04",
           name: "SALCHI CHORI FRIES",
-          price: "$22.000",
+          price: "$24.000",
           img: "",
-          desc: "300gr de papa rústica, salchicha tipo americana y chorizo de ternera, salsa de queso cheddar, salsa de la casa y queso campesino.",
-          addons: [DALE_PODER]
+          desc: "300gr de papa rústica, salchicha tipo americana y chorizo de ternera, salsa de queso cheddar, salsa de la casa y queso campesino."
         })
       ]
     },
@@ -370,18 +365,19 @@
     maicitos: {
       label: "MAICITOS",
       type: "cards",
+      showDalePoder: true,
       photo: [
         reg({
           n: "01",
           name: "DESGRANADO PORTO",
-          price: "$29.500",
+          price: "$33.000",
           img: "img/maicitos/Porto.webp",
           desc: "Maíz tierno, chorizo, pollo desmechado, champiñones, crema de leche gratinado con queso sabana y parmesano, acompañado de papa rústica y salsa de la casa."
         }),
         reg({
           n: "02",
           name: "DESGRANADO PARRILLERO",
-          price: "$27.900",
+          price: "$29.000",
           img: "img/maicitos/Parrillero.webp",
           desc: "Maíz tierno, filete de pechuga y res, tocineta ahumada, salsa de queso cheddar, queso campesino, acompañado de papa rústica y salsa de la casa."
         })
@@ -412,14 +408,14 @@
             reg({
               n: "01",
               name: "SODA JAMAIQUINA",
-              price: "$12.000",
+              price: "$13.000",
               img: "img/bebidas/sodas/Jamaiquina.webp",
               desc: "Soda bretaña con reducción de flor de Jamaica, jugo de arándanos, canela y limón."
             }),
             reg({
               n: "02",
               name: "SODA PRIMAVERAL",
-              price: "$12.000",
+              price: "$13.000",
               img: "",
               desc: "Soda bretaña con reducción de uchuva, naranja, piña y limón."
             })
@@ -428,8 +424,8 @@
         {
           title: "LIMONADAS",
           items: [
-            reg({ n: "03", name: "LIMONADA DE COCO", price: "$13.000", img: "img/bebidas/limonadas/Coco.webp" }),
-            reg({ n: "04", name: "LIMON CEREZA", price: "$10.000", img: "img/bebidas/limonadas/Cereza.webp" }),
+            reg({ n: "03", name: "LIMONADA DE COCO", price: "$14.000", img: "img/bebidas/limonadas/Coco.webp" }),
+            reg({ n: "04", name: "LIMON CEREZA", price: "$12.000", img: "img/bebidas/limonadas/Cereza.webp" }),
             reg({
               n: "05",
               name: "LIMONADA DE MANGO BICHE",
@@ -438,20 +434,20 @@
               img: "img/bebidas/limonadas/MangoBiche.webp"
             }),
             reg({ n: "06", name: "LIMONADA DE HIERBABUENA", price: "$8.000", img: "" }),
-            reg({ n: "07", name: "LIMONADA DE PANELA PERSONAL", price: "$6.000", img: "" }),
-            reg({ n: "08", name: "LIMONADA NATURAL PERSONAL", price: "$6.000", img: "" }),
+            reg({ n: "07", name: "LIMONADA DE PANELA PERSONAL", price: "$7.000", img: "" }),
+            reg({ n: "08", name: "LIMONADA NATURAL PERSONAL", price: "$7.000", img: "" }),
             reg({
               n: "09",
               name: "LIMONADA PANELA 1.5L",
               warningTag: "SOLO PARA CONSUMO EN EL RESTAURANTE",
-              price: "$13.000",
+              price: "$14.000",
               img: ""
             }),
             reg({
               n: "10",
               name: "LIMONADA NATURAL 1.5L",
               warningTag: "SOLO PARA CONSUMO EN EL RESTAURANTE",
-              price: "$13.000",
+              price: "$14.000",
               img: ""
             })
           ]
@@ -459,14 +455,14 @@
         {
           title: "JUGOS",
           items: [
-            reg({ n: "11", name: "FRESA + MANGO PERSONAL", price: "$8.000", img: "" }),
-            reg({ n: "12", name: "MARACUYÁ + MANGO PERSONAL", price: "$8.000", img: "" }),
-            reg({ n: "13", name: "MANDARINA + NARANJA", price: "$8.000", img: "" }),
-            reg({ n: "14", name: "NARANJA + PIÑA PERSONAL", price: "$8.000", img: "img/bebidas/jugos/NaranjaPina.webp" }),
-            reg({ n: "15", name: "FRESA + MANGO 1.5L", price: "$16.000", img: "" }),
-            reg({ n: "16", name: "MARACUYÁ + MANGO 1.5L", price: "$16.000", img: "" }),
-            reg({ n: "17", name: "MANDARINA + NARANJA 1.5L", price: "$16.000", img: "" }),
-            reg({ n: "18", name: "NARANJA + PIÑA 1.5L", price: "$16.000", img: "img/bebidas/jugos/NaranjaPina.webp" })
+            reg({ n: "11", name: "FRESA + MANGO PERSONAL", price: "$9.000", img: "" }),
+            reg({ n: "12", name: "MARACUYÁ + MANGO PERSONAL", price: "$9.000", img: "" }),
+            reg({ n: "13", name: "MANDARINA + NARANJA", price: "$9.000", img: "" }),
+            reg({ n: "14", name: "NARANJA + PIÑA PERSONAL", price: "$9.000", img: "img/bebidas/jugos/NaranjaPina.webp" }),
+            reg({ n: "15", name: "FRESA + MANGO 1.5L", price: "$17.000", img: "" }),
+            reg({ n: "16", name: "MARACUYÁ + MANGO 1.5L", price: "$17.000", img: "" }),
+            reg({ n: "17", name: "MANDARINA + NARANJA 1.5L", price: "$17.000", img: "" }),
+            reg({ n: "18", name: "NARANJA + PIÑA 1.5L", price: "$17.000", img: "img/bebidas/jugos/NaranjaPina.webp" })
           ]
         },
         {
@@ -476,26 +472,27 @@
               title: "IMPORTADAS",
               items: [
                 reg({ n: "19", name: "ESTRELLA GALICIA", price: "$14.000", img: "" }),
-                reg({ n: "20", name: "CORONA", price: "$10.000", img: "" }),
-                reg({ n: "21", name: "STELLA ARTOIS", price: "$10.000", img: "" }),
-                reg({ n: "22", name: "HEINEKEN", price: "$7.000", img: "" })
+                reg({ n: "20", name: "DUFF", price: "$13.000", img: "" }),
+                reg({ n: "21", name: "CORONA", price: "$10.000", img: "" }),
+                reg({ n: "22", name: "STELLA ARTOIS", price: "$10.000", img: "" }),
+                reg({ n: "23", name: "HEINEKEN", price: "$7.000", img: "" })
               ]
             },
             {
               title: "ARTESANALES",
               items: [
-                reg({ n: "23", name: "3 CORDILLERAS ROSADA", price: "$9.000", img: "" }),
-                reg({ n: "24", name: "3 CORDILLERAS NEGRA", price: "$9.000", img: "" })
+                reg({ n: "24", name: "3 CORDILLERAS ROSADA", price: "$9.000", img: "" }),
+                reg({ n: "25", name: "3 CORDILLERAS NEGRA", price: "$9.000", img: "" })
               ]
             },
             {
               title: "NACIONALES",
               items: [
-                reg({ n: "25", name: "CLUB COLOMBIA DORADA", price: "$7.000", img: "" }),
-                reg({ n: "26", name: "CLUB COLOMBIA ROJA", price: "$7.000", img: "" }),
-                reg({ n: "27", name: "CLUB COLOMBIA DE TRIGO", price: "$7.000", img: "" }),
+                reg({ n: "26", name: "CLUB COLOMBIA DORADA", price: "$7.000", img: "" }),
+                reg({ n: "27", name: "CLUB COLOMBIA ROJA", price: "$7.000", img: "" }),
+                reg({ n: "28", name: "CLUB COLOMBIA DE TRIGO", price: "$7.000", img: "" }),
                 reg({
-                  n: "28",
+                  n: "29",
                   name: "JARRA LITRO DE CLUB COLOMBIA DORADA",
                   tag: "PÍDELA SOLA O EN MICHELADA",
                   price: "$15.000",
@@ -509,15 +506,15 @@
           title: "OTRAS BEBIDAS",
           items: [
             reg({
-              n: "29",
+              n: "30",
               name: "GASEOSA POSTOBÓN PET 400",
               price: "$5.000",
               desc: "Manzana Postobón o Kola Hipinto",
               img: ""
             }),
-            reg({ n: "30", name: "AGUA MINERAL HATSU 600ML", price: "$5.000", img: "" }),
-            reg({ n: "31", name: "TÉ HATSU", price: "$8.000", img: "" }),
-            reg({ n: "32", name: "SODA BRETAÑA", price: "$5.000", img: "" })
+            reg({ n: "31", name: "AGUA MINERAL HATSU 600ML", price: "$5.000", img: "" }),
+            reg({ n: "32", name: "TÉ HATSU", price: "$8.000", img: "" }),
+            reg({ n: "33", name: "SODA BRETAÑA", price: "$5.000", img: "" })
           ]
         }
       ]
@@ -603,7 +600,7 @@
   const needsConfig = (it) =>
     Boolean((it.sizes && it.sizes.length) || (it.choices && it.choices.length) || (it.addons && it.addons.length));
 
-  function cardHTML(it) {
+  function cardHTML(it, showDalePoder) {
     const i = idxOf(it);
     return `<div class="bcard" data-anim data-action="detail" data-i="${i}" role="button" tabindex="0">
       <span class="num">${escapeHtml(it.n)}</span>
@@ -614,6 +611,11 @@
       <div class="p-5">
         <h3 class="disp text-3xl leading-none" style="color:var(--crema)">${escapeHtml(it.name)}</h3>
         <p class="text-[13px] mt-2 leading-snug" style="color:var(--crema-fade)">${it.desc || ""}</p>
+        ${showDalePoder ? `<div class="dale-poder-note" data-card-note role="note">
+          <span class="dale-poder-title">${escapeHtml(DALE_PODER.label)} <strong>+${escapeHtml(DALE_PODER.price)}</strong></span>
+          <span>${escapeHtml(DALE_PODER.description)}</span>
+          <span>Pídelo al ordenar.</span>
+        </div>` : ""}
         <div class="card-actions mt-4">
           <span class="disp text-2xl" style="color:var(--ambar)">${escapeHtml(it.price)}</span>
           ${actionsHTML(it)}
@@ -684,12 +686,8 @@
     if (!d) return;
     let h = "";
 
-    if (d.categoryNote) {
-      h += `<div class="category-note" data-anim>${d.categoryNote}</div>`;
-    }
-
     if (d.type === "cards") {
-      h += `<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">${d.photo.map(cardHTML).join("")}</div>`;
+      h += `<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">${d.photo.map((item) => cardHTML(item, d.showDalePoder)).join("")}</div>`;
     } else if (d.type === "beverages") {
       h += beveragesHTML(d);
     } else if (d.type === "list2col") {
@@ -1139,6 +1137,7 @@
   };
 
   document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-card-note]")) return;
     const el = e.target.closest("[data-action]");
     if (!el) return;
     if (el.closest(".bcard") && el.dataset.action === "detail" && e.target.closest("button")) {
@@ -1225,9 +1224,8 @@
     ];
     const build = () =>
       words
-        .map(
-          (w) =>
-            `<span class="px-7" style="color:var(--crema)">${w} <span style="color:var(--rojo)">★</span></span>`
+        .map((w, i) =>
+          `<span class="px-7" style="color:var(--crema)">${w} <span style="color:var(--${i % 2 ? "azul" : "rojo"})">★</span></span>`
         )
         .join("");
     document.getElementById("marquee").innerHTML = build() + build();
@@ -1252,6 +1250,12 @@
       const a = document.getElementById(id);
       if (a) a.href = url;
     });
+    const birthdayWa = document.getElementById("birthdayWa");
+    if (birthdayWa) {
+      birthdayWa.href = whatsappUrl(`${greeting()}, quiero reservar una mesa para celebrar un cumpleaños. ¿Me comparten la disponibilidad?`);
+    }
+    const birthdayCall = document.getElementById("birthdayCall");
+    if (birthdayCall) birthdayCall.href = `tel:+${WHATSAPP_NUMBER}`;
   };
 
   /* ---------- MAP LAZY ---------- */
