@@ -1324,10 +1324,20 @@
   syncHours();
   syncWaLinks();
   buildTabs();
-  window.addEventListener("load", () => {
+  let siteShown = false;
+  const showSite = () => {
+    if (siteShown) return;
+    siteShown = true;
+    render(current);
     setTimeout(() => {
-      loaderEl.classList.add("hide");
-      render(current);
-    }, 900);
-  });
+      if (loaderEl) loaderEl.classList.add("hide");
+    }, 300);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showSite, { once: true });
+  } else {
+    showSite();
+  }
+  window.addEventListener("load", showSite, { once: true });
 })();
